@@ -1,0 +1,4 @@
+homelab	1	bash	1	/home/arty/configs/tmux	vim
+homelab	1	bash	2	/home/arty/configs/tmux	bash
+homelab	2	bash	1	/home/arty/configs	bash
+homelab	3	bash	1	/home/arty/configs	bash
