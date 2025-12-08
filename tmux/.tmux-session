@@ -1,4 +1,9 @@
-homelab	1	bash	1	/home/arty/configs/tmux	vim
-homelab	1	bash	2	/home/arty/configs/tmux	bash
-homelab	2	bash	1	/home/arty/configs	bash
-homelab	3	bash	1	/home/arty/configs	bash
+dodo-4	1	prod	1	/home/arty	ssh
+dodo-4	1	prod	2	/home/arty/brick/dodo/kids	bash
+dodo-4	2	vscode	1	/home/arty/brick/dodo/kids	bash
+dodo-4	2	vscode	2	/home/arty/brick/dodo/kids	bash
+homelab	1	tmux-conf	1	/home/arty/configs	bash
+homelab	1	tmux-conf	2	/home/arty/configs/tmux	bash
+homelab	2	test-1	1	/home/arty	bash
+homelab	2	test-1	2	/home/arty	bash
+homelab	3	bash	1	/home/arty	bash
