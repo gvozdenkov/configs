@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 
-# get libevent
+# Install tmux with all deps, autocomplition and configs
+# Run script from configs/tmux for correct path resolution
+
+# install libevent
 wget https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
 tar -zxf libevent-*.tar.gz
 
@@ -11,7 +14,7 @@ make && make install
 cd ..
 rm -rf libevent-*/ libevent-*.tar.gz
 
-# get ncurses
+# install ncurses
 wget https://invisible-island.net/datafiles/release/ncurses.tar.gz
 
 cd ncurses-*/
@@ -21,7 +24,7 @@ make && make install
 cd ..
 rm -rf ncurses-*/ ncurses-*.tar.gz
 
-# install other dep
+# install other deps
 sudo apt update -y
 sudo apt install -y libevent-dev ncurses-dev build-essential bison pkg-config
 
@@ -46,4 +49,9 @@ EOF
 # setup autocomplition
 curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
 
+# setup .tmux.conf
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf 
+
 source ~/.bashrc
+
+echo tmux -V
